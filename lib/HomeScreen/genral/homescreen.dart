@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo2/HomeScreen/genral/add_task_buttonsheet.dart';
 import 'package:todo2/HomeScreen/lisrt/listScreen.dart';
 import 'package:todo2/HomeScreen/settings/settingsScreen.dart';
 
@@ -43,10 +44,17 @@ class _HomescreenState extends State<Homescreen> {
           )
         ),
         onPressed: () {
+          showAddTaskButtonSheet();
         },
         child:   Icon(Icons.add, size: 32,),
       ),
       body: tabs[csetrnindex],
     );
   }
+  void showAddTaskButtonSheet(){
+    showModalBottomSheet(context: context, builder:(builderContext){
+return AddTaskBottomSheet();
+    });
+  }
+
 }
