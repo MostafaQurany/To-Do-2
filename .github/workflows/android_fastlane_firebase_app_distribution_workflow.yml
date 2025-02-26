@@ -30,6 +30,8 @@ jobs:
           working_directory: android
 
       - name: Build App Distribution to fastlane then to firebase
+        env:
+          firebase_cli_token: ${{ secrets.firebase_cli_token }}
         run: |
           bundle exec fastlane android firebase_app_test
         working-directory: android
