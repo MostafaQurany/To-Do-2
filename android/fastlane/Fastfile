@@ -29,5 +29,9 @@ platform :android do
         testers: "qmostafa230@gmail.com"
       )
   end
+  lane : google play do
+
+
+      end
 
 end
