@@ -31,5 +31,5 @@ jobs:
 
       - name: Build App Distribution to fastlane then to firebase
         run: |
-          bundle exec fastlane android distribute_to_firebase
+          bundle exec fastlane android firebase_app_test
         working-directory: android
