@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "291007697765",
+    "project_id": "training-cafdc",
+    "storage_bucket": "training-cafdc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291007697765:android:675d8b0fdd2b5271ab478c",
+        "android_client_info": {
+          "package_name": "com.example.tryfastlane"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrAwT0bJohp7QSbJ0YtL8xngQdSfGM38g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291007697765:android:83f22c5212027549ab478c",
+        "android_client_info": {
+          "package_name": "com.example.tryfastlaneNew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrAwT0bJohp7QSbJ0YtL8xngQdSfGM38g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
