@@ -1,4 +1,4 @@
-name: Android Fastlane with firebase app distribution
+name: Android Fastlane with Firebase App Distribution
 
 on:
   push:
@@ -18,20 +18,27 @@ jobs:
           distribution: 'temurin'
 
       - name: Install Flutter
-        uses: subosito/flutter-action@v1
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.27.2'
 
-      - name: Setup Ruby
+      - name: Install Firebase CLI
+        run: curl -sL https://firebase.tools | bash
+
+      - name: Setup Ruby & Install Bundler
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4.1'
           bundler-cache: true
-          working_directory: android
+          working-directory: android
 
-      - name: Build App Distribution to fastlane then to firebase
+      - name: Install Fastlane Dependencies
+        run: bundle install
+        working-directory: android
+
+      - name: Build & Distribute App with Fastlane
         env:
-          firebase_cli_token: ${{ secrets.firebase_cli_token }}
+          firebase_cli_token: ${{ secrets.FIREBASE_CLI_TOKEN }}
         run: |
           bundle exec fastlane android firebase_app_test
         working-directory: android
